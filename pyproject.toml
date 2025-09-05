@@ -6,16 +6,16 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "YOUR_PROJECT_NAME"
+name = "chessboard_parser"
 dynamic = ["version"]
-description = "YOUR DESCRIPTION"
+description = "This is a chessboard parser that can parse chessboard positions to FEN strings and vice versa."
 readme = {file = "README.md", content-type = "text/markdown"}
 
 authors = [
-  {name = "YOUR NAME", email = "your@email.com"},
+  {name = "Siyuan Wang", email = "sywang0227@gmail.com"},
 ]
 maintainers = [
-  {name = "YOUR NAME", email = "your@email.com"},
+  {name = "Siyuan Wang", email = "sywang0227@gmail.com"},
 ]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -32,7 +32,7 @@ dependencies = [
 ]
 
 [project.scripts]
-YOUR_SCRIPT_NAME = "YOUR_MODULE.cli:app"
+chessboard_parser = "chessboard_parser.cli:app"
 
 [project.optional-dependencies]
 dev = [
@@ -46,9 +46,9 @@ dev = [
 
 [project.urls]
 # Optional URLs
-bugs = "https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME/issues"
-changelog = "https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME/blob/main/changelog.md"
-homepage = "https://github.com/YOUR_USERNAME/YOUR_PROJECT_NAME"
+bugs = "https://github.com/Wangmerlyn/ChessBoard-Parser/issues"
+changelog = "https://github.com/Wangmerlyn/ChessBoard-Parser/blob/main/changelog.md"
+homepage = "https://github.com/Wangmerlyn/ChessBoard-Parser"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -57,7 +57,7 @@ package-dir = {"" = "src"}
 "*" = ["*.*"]
 
 [tool.setuptools.dynamic]
-version = { attr = "YOUR_PROJECT.__version__" }
+version = { attr = "chessboard_parser.__version__" }
 
 # -----------------------------
 # Mypy type checking
@@ -85,6 +85,6 @@ ignore = ["E501"]
 exclude = ["build", "dist", ".venv"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["YOUR_PROJECT_NAME"]
+known-first-party = ["chessboard_parser"]
 combine-as-imports = true
 force-single-line = false
